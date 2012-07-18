@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Welcome to PGHouse豪徳寺</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="プログラミングを学び合いながら、新しいWEBサービスをどんどん作っちゃうシェアハウス。プログラミングを教え合う（教わる側も、教える側もOK！）ことに興味のある方はjoin us!!">
+    <meta name="keywords" content="シェアハウス, プログラミング, 勉強会, PHP, Java, 料理, 屋上, リビング, プロジェクタ, MySQL, MongoDB, Hadoop, ハッカソン, スタートアップ, webサービス, 起業, MBA, モヒート, ウイスキー, facebook, Rails, Python, javascript, node.js, jquery, ペアプロ">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32877795-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script>
+    var i = 1;
+    $(function(){
+        setInterval(changeImg, 5000);
+        function changeImg(){
+            $('#topImg').animate({'opacity':'0'}, 500, function(){
+                $('#topImg').attr('src', 'img/tops/pgh_top_00' + i + '.png').animate({'opacity':'1'}, 500);
+            });
+            if (i <= 7) {
+                i++;
+            } else {
+                i = 1;
+            }
+        }
+    });
+    </script>
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=134474456690922";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="header">
+    <h1>
+        <a href="index.html">PGHouse-Gotokuji.net 〜プログラミングを学び合うシェアハウス〜</a>
+    </h1>
+</div>
+<div id="content">
+    <div class="elem center left">
+        <img id="topImg" src="img/tops/pgh_top_001.png" widht="480" height="360">
+        <div class="page-contents-line">
+            <a href="index.html">Home</a>｜
+            <a href="member.html">Member</a>｜
+            <a href="map.html">Map</a>｜
+            <a href="photo.html">Photo</a>｜
+            <a href="event.html">Event</a>｜
+            <a href="social.html">Social</a>｜
+            <a href="bookshelf.html">Bookshelf</a>
+        </div>
+        <p style="margin-top:10px;">PGHouseへの訪問や、</p>
+        <p>勉強会等のご利用に関するお問い合わせは</p>
+        <p><a href="https://www.facebook.com/pghousegotokuji">PGHouse豪徳寺のFacebookページ</a>にて受け付けております</p>
+        <p>メッセージ機能にてお問い合わせ内容をお伝えください</p>
+    </div>
+    <div class="elem right">
+        <h3>プレスリリース：</h3>
+        <div class="content-text">
+            <p>[2012年6月24日]</p>
+            <h4>PGHouse豪徳寺に12人のメンバー全員が揃う！ひゃっほい！\(^o^)/</h4>
+        </div>
+        <div class="content-text">
+            <p>[2012年6月20日]</p>
+            <h4>PGHouse豪徳寺がcareerhackに取り上げられました！：</h4>
+            <p>
+                <a href="http://careerhack.en-japan.com/report/detail/8">「生き方にあわせて、働き方を決める」―プログラマ限定シェアハウスで暮らす人々の選択。</a>
+            </p>
+        </div>
+        <div class="content-text">
+            <p>[2012年5月14日]</p>
+            <h4>PGHouse豪徳寺に入居開始！</h4>
+        </div>
+
+        <div class="fb-like-box" data-href="https://www.facebook.com/pghousegotokuji" data-width="480" data-height="360" data-show-faces="true" data-stream="true" data-header="true"></div>
+
+    </div>
+</div>
+<div id="footer">
+    <p class="footer">Copyright &copy; 2012 PGHouse-Gotokuji all rights reserved.</p>
+</div>
+</body>
+</html>
