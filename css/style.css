@@ -47,13 +47,10 @@ h1 a:hover {
     background : none;
 }
 
-/*
-   h2のmargin-topがおかしいのでレイアウト調整する必要あり
-*/
 h2 {
     font-size     : 18px;
     color         : #fff;
-    margin        : 10px;
+    margin        : 0 10px 10px 10px;
     padding-left  : 10px;
     background    : #01053a;
     border-radius : 20px;
@@ -67,7 +64,7 @@ h2 a {
 h3 {
     font-size : 18px;
     color : #fff;
-    margin : 10px 10px 0 0;
+    margin : 0 10px 0 0;
     padding-left : 10px;
     background : #01053a;
     border-radius : 20px;
@@ -104,7 +101,10 @@ hr {
 
 .elem-text {
     margin : 0 10px;
-    font-size : 18px;
+}
+
+.elem-list {
+    width : 980px;
 }
 
 #header {
@@ -117,8 +117,8 @@ hr {
 
 #content {
     width         : 1000px;
-    height        : 800px;
     margin        : 0 auto 10px auto;
+    padding-top   : 10px;
     background    : #d0dddd;
     border-radius : 20px;
 }
@@ -141,5 +141,16 @@ hr {
 }
 
 .footer {
-    padding       : 5px;
+    padding : 5px;
+}
+
+.clearfix{
+    overflow : hidden;
+}
+.clearfix:after {
+    content  : "";
+    display  : block;
+    clear    : both;
+    height   : 1px;
+    overflow : hidden;
 }
