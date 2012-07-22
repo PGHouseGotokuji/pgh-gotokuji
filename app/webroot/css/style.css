@@ -1,0 +1,156 @@
+body {
+    background  : #f7f7f7;
+    color       : #052c6e;
+    font-size   : 14px;
+    font-family : Meiryo UI;
+}
+
+a {
+    text-decoration : none;
+    color           : #0000FF;
+}
+
+a:hover {
+    color      : #00bf00;
+    background : #fff;
+}
+
+p {
+    margin : 3px;
+}
+
+ul {
+    list-style : none;
+}
+
+li {
+    float     : left;
+    font-size : 16px;
+}
+
+img {
+    margin : 10px;
+}
+
+h1 {
+    font-size     : 26px;
+    padding       : 5px 5px 5px 10px;
+    margin        : 0px;
+}
+
+h1 a {
+    text-decoration : none;
+    color           : #fff;
+}
+
+h1 a:hover {
+    background : none;
+}
+
+h2 {
+    font-size     : 18px;
+    color         : #fff;
+    margin        : 0 10px 10px 10px;
+    padding-left  : 10px;
+    background    : #01053a;
+    border-radius : 20px;
+}
+
+h2 a {
+    text-decoration : none;
+    color           : #fff;
+}
+
+h3 {
+    font-size : 18px;
+    color : #fff;
+    margin : 0 10px 0 0;
+    padding-left : 10px;
+    background : #01053a;
+    border-radius : 20px;
+}
+
+h4 {
+    font-size : 14px;
+    margin : 0;
+}
+
+hr {
+    margin : 10px;
+}
+
+
+/******************
+ * original class *
+ ******************/
+.left {
+    float : left;
+}
+
+.right {
+    float : right;
+}
+
+.center {
+    text-align : center;
+}
+
+.elem {
+    width : 500px;
+}
+
+.elem-text {
+    margin : 0 10px;
+}
+
+.elem-list {
+    width : 980px;
+}
+
+#header {
+    width         : 1000px;
+    height        : 49px;
+    margin        : 10px auto 10px auto;
+    background    : #01053a;
+    border-radius : 20px;
+}
+
+#content {
+    width         : 1000px;
+    margin        : 0 auto 10px auto;
+    padding-top   : 10px;
+    background    : #d0dddd;
+    border-radius : 20px;
+}
+
+.page-contents-line {
+    font-size : 16px;
+}
+
+.content-text {
+    padding : 10px;
+}
+
+#footer {
+    width         : 1000px;
+    color         : #fff; 
+    text-align    : center;
+    background    : #01053a;
+    margin        : auto;
+    border-radius : 20px;
+}
+
+.footer {
+    padding-top : 7px;
+}
+
+.clearfix{
+    overflow : hidden;
+}
+.clearfix:after {
+    content  : "";
+    display  : block;
+    clear    : both;
+    height   : 1px;
+    overflow : hidden;
+}

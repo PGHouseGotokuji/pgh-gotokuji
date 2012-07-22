@@ -1,4 +1,5 @@
 <?php
+App::uses('Util', 'Lib');
 Class AppController extends Controller
 {
     var $ext = '.html';
