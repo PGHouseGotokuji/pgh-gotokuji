@@ -1,17 +1,18 @@
 body {
-    background  : #f7f7f7;
+    background  : #fff;
     color       : #052c6e;
-    font-size   : 14px;
+    font-size   : 20px;
     font-family : Meiryo UI;
+    margin      : 0;
 }
 
 a {
     text-decoration : none;
-    color           : #0000FF;
+    color           : #01053a;
 }
 
 a:hover {
-    color      : #00bf00;
+    color      : #009900;
     background : #fff;
 }
 
@@ -25,7 +26,7 @@ ul {
 
 li {
     float     : left;
-    font-size : 16px;
+    font-size : 20px;
 }
 
 img {
@@ -33,14 +34,13 @@ img {
 }
 
 h1 {
-    font-size     : 26px;
-    padding       : 5px 5px 5px 10px;
+    font-size     : 30px;
+    padding       : 0px 5px 5px 10px;
     margin        : 0px;
 }
 
 h1 a {
     text-decoration : none;
-    color           : #fff;
 }
 
 h1 a:hover {
@@ -48,9 +48,9 @@ h1 a:hover {
 }
 
 h2 {
-    font-size     : 18px;
+    font-size     : 22px;
     color         : #fff;
-    margin        : 0 10px 10px 10px;
+    margin        : 0 10px 0 10px;
     padding-left  : 10px;
     background    : #01053a;
     border-radius : 20px;
@@ -62,17 +62,9 @@ h2 a {
 }
 
 h3 {
-    font-size : 18px;
-    color : #fff;
-    margin : 0 10px 0 0;
-    padding-left : 10px;
-    background : #01053a;
-    border-radius : 20px;
-}
-
-h4 {
-    font-size : 14px;
-    margin : 0;
+    font-size     : 20px;
+    margin        : 0 10px 0 0;
+    padding-left  : 10px;
 }
 
 hr {
@@ -107,24 +99,77 @@ hr {
     width : 980px;
 }
 
-#header {
-    width         : 1000px;
-    height        : 49px;
-    margin        : 10px auto 10px auto;
-    background    : #01053a;
-    border-radius : 20px;
+.home-bar {
+    width      : 100%;
+    text-align : center;
+    /* Firefox用 */
+    background: -moz-linear-gradient(top,
+        #000,
+        #01053a 90%,
+        #01053a
+    );
+    /* Safari,Google Chrome用 */
+    background : -webkit-gradient(linear, left top, left bottom,
+        from(#000),
+        color-stop(0.9, #01053a),
+        to(#01053a)
+    );
+    /* IE用 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr="#000", EndColorStr="#01053a");
 }
 
-#content {
-    width         : 1000px;
-    margin        : 0 auto 10px auto;
-    padding-top   : 10px;
-    background    : #d0dddd;
-    border-radius : 20px;
+* html div#home-bar { 
+    position: absolute;
+    top: expression(eval(document.documentElement.scrollTop+0));
+}
+
+#header {
+    width      : 1000px;
+    height     : 85px;
+    margin     : 10px auto;
+}
+
+#container {
+    width         : 100%;
+    margin-bottom : 10px;
+}
+
+.content-top-wrapper {
+    width      : 100%;
+    background : #000;
+}
+
+.content-top {
+    width      : 1000px;
+    margin     : 0 auto;
+    color      : #fff;
+}
+
+.content-top a {
+    color : #00ff00;
+}
+
+.content-bottom {
+    width  : 1000px;
+    margin : 0 auto;
 }
 
 .page-contents-line {
-    font-size : 16px;
+    font-size : 20px;
+}
+
+.page-contents-line a {
+    font-weight : bold;
+    background  : #000;
+    color       : #fff;
+    padding     : 5px;
+}
+
+.page-contents-line a:hover {
+    background      : #fff;
+    text-decoration : underline;
+    color           : #009900;
+    padding         : 5px;
 }
 
 .content-text {
@@ -132,16 +177,16 @@ hr {
 }
 
 #footer {
-    width         : 1000px;
+    width         : 100%;
     color         : #fff; 
+    font-size     : 12px;
     text-align    : center;
-    background    : #01053a;
+    background    : #000;
     margin        : auto;
-    border-radius : 20px;
 }
 
 .footer {
-    padding-top : 7px;
+    padding : 7px 0;
 }
 
 .clearfix{
