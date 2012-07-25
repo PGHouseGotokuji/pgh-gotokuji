@@ -34,9 +34,9 @@ img {
 }
 
 h1 {
-    font-size     : 30px;
-    padding       : 0px 5px 5px 10px;
-    margin        : 0px;
+    font-size : 30px;
+    padding   : 0px 5px 5px 10px;
+    margin    : 0px;
 }
 
 h1 a {
@@ -124,9 +124,9 @@ hr {
 }
 
 #header {
-    width      : 1000px;
-    height     : 85px;
-    margin     : 10px auto;
+    width  : 1000px;
+    height : 85px;
+    margin : 10px auto;
 }
 
 #container {
@@ -140,9 +140,9 @@ hr {
 }
 
 .content-top {
-    width      : 1000px;
-    margin     : 0 auto;
-    color      : #fff;
+    width  : 1000px;
+    margin : 0 auto;
+    color  : #fff;
 }
 
 .content-top a {
@@ -160,16 +160,37 @@ hr {
 
 .page-contents-line a {
     font-weight : bold;
-    background  : #000;
-    color       : #fff;
-    padding     : 5px;
+    background: -moz-linear-gradient(top,
+        #21369e,
+        #01053a 30%,
+        #01053a
+    );
+    background : -webkit-gradient(linear, left top, left bottom,
+        from(#21369e),
+        color-stop(0.3, #01053a),
+        to(#01053a)
+    );
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr="#21369e", EndColorStr="#01053a");
+    color         : #fff;
+    padding       : 5px 10px;
+    border-radius : 5px;
 }
 
 .page-contents-line a:hover {
-    background      : #fff;
-    text-decoration : underline;
-    color           : #009900;
-    padding         : 5px;
+    background: -moz-linear-gradient(top,
+        #21369e,
+        #01053a 30%,
+        #01053a
+    );
+    background : -webkit-gradient(linear, left top, left bottom,
+        from(#21369e),
+        color-stop(0.3, #01053a),
+        to(#01053a)
+    );
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr="#21369e", EndColorStr="#01053a");
+    color         : #00ff00;
+    padding       : 5px 10px;
+    border-radius : 5px;
 }
 
 .content-text {
@@ -177,12 +198,12 @@ hr {
 }
 
 #footer {
-    width         : 100%;
-    color         : #fff; 
-    font-size     : 12px;
-    text-align    : center;
-    background    : #000;
-    margin        : auto;
+    width      : 100%;
+    color      : #fff; 
+    font-size  : 12px;
+    text-align : center;
+    background : #000;
+    margin     : auto;
 }
 
 .footer {
