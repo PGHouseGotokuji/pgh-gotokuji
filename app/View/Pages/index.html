@@ -1,18 +1,18 @@
 <script>
-    var i = 1;
-    $(function(){
-        setInterval(changeImg, 5000);
-        function changeImg(){
-            $('#topImg').animate({'opacity':'0'}, 500, function(){
-                $('#topImg').attr('src', 'img/tops/pgh_top_00' + i + '.png').animate({'opacity':'1'}, 500);
-            });
-            if (i <= 7) {
-                i++;
-            } else {
-                i = 1;
-            }
+var i = 1;
+$(function(){
+    setInterval(changeImg, 5000);
+    function changeImg(){
+        $('#topImg').animate({'opacity':'0'}, 500, function(){
+            $('#topImg').attr('src', 'img/tops/pgh_top_00' + i + '.png').animate({'opacity':'1'}, 500);
+        });
+        if (i <= 7) {
+            i++;
+        } else {
+            i = 1;
         }
-    });
+    }
+});
 </script>
 <div class="content-top-wrapper">
     <div class="content-top clearfix" style="position:relative;">

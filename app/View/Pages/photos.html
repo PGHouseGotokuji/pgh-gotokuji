@@ -1,33 +1,52 @@
+<script>
+$(function(){
+    $('.click-image').hover(
+        function(){
+            $(this).animate({'opacity':'1'}, 200);
+        }, 
+        function(){
+            $(this).animate({'opacity':'0.6'}, 200);
+        }
+    );
+
+    $('.click-image').click(function(){
+        var imgSrc = $(this).attr('src');
+        $('#topImg').animate({'opacity':'0'}, 100, function(){
+            $('#topImg').attr('src', imgSrc).animate({'opacity':'1'}, 100)
+        });
+    });
+});
+</script>
 <div class="content-top-wrapper">
     <div class="content-top clearfix" style="position:relative;">
         <div class="elem left" style="position:absolute;top:50%;margin-top:-190px;">
-            <img style="border:solid 1px #fff;" src="img/lifes/pgh_life_007.png" alt="PGHouse-Photo_1" width="480" height="360">
+            <img id="topImg" style="border:solid 1px #fff;" src="img/lifes/pgh_life_007.png" alt="PGHouse-Photo_1" width="480" height="360">
         </div>
         <div class="elem right" style="padding-top:10px;height:400px;">
             <h2>PGHouse豪徳寺写真集</h2>
             <div class="elem">
             <? for ($i=1; $i<2; $i++) { ?>
-                <img style="border:solid 1px #fff;" src="img/cooks/pgh_cook_00<?= $i; ?>.png" alt="Cook-Photo_<?= $i; ?>" width="40" height="30">
+                <img class="click-image" style="border:solid 1px #fff;" src="img/cooks/pgh_cook_00<?= $i; ?>.png" alt="Cook-Photo_<?= $i; ?>" width="40" height="30">
             <? } ?>
             </div>
             <div class="elem">
             <? for ($i=1; $i<4; $i++) { ?>
-                <img style="border:solid 1px #fff;" src="img/equipments/pgh_equipment_00<?= $i; ?>.png" alt="Equipment-Photo_<?= $i; ?>" width="40" height="30">
+                <img class="click-image" style="border:solid 1px #fff;" src="img/equipments/pgh_equipment_00<?= $i; ?>.png" alt="Equipment-Photo_<?= $i; ?>" width="40" height="30">
             <? } ?>
             </div>
             <div class="elem">
             <? for ($i=1; $i<7; $i++) { ?>
-                <img style="border:solid 1px #fff;" src="img/learnings/pgh_learning_00<?= $i; ?>.png" alt="Learning-Photo_<?= $i; ?>" width="40" height="30">
+                <img class="click-image" style="border:solid 1px #fff;" src="img/learnings/pgh_learning_00<?= $i; ?>.png" alt="Learning-Photo_<?= $i; ?>" width="40" height="30">
             <? } ?>
             </div>
             <div class="elem">
             <? for ($i=1; $i<9; $i++) { ?>
-                <img style="border:solid 1px #fff;" src="img/lifes/pgh_life_00<?= $i; ?>.png" alt="Life-Photo_<?= $i; ?>" width="40" height="30">
+                <img class="click-image" style="border:solid 1px #fff;" src="img/lifes/pgh_life_00<?= $i; ?>.png" alt="Life-Photo_<?= $i; ?>" width="40" height="30">
             <? } ?>
             </div>
             <div class="elem">
             <? for ($i=1; $i<7; $i++) { ?>
-                <img style="border:solid 1px #fff;" src="img/roofs/pgh_roof_00<?= $i; ?>.png" alt="Roof-Photo_<?= $i; ?>" width="40" height="30">
+                <img class="click-image" style="border:solid 1px #fff;" src="img/roofs/pgh_roof_00<?= $i; ?>.png" alt="Roof-Photo_<?= $i; ?>" width="40" height="30">
             <? } ?>
             </div>
         </div>

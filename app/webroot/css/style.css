@@ -94,6 +94,10 @@ hr {
     width : 500px;
 }
 
+.elem-wide {
+    width : 1000px;
+}
+
 .elem-text {
     margin : 10px;
 }
@@ -147,7 +151,8 @@ hr {
     left       : 0;
     top        : 50%;
     width      : 150px;
-    margin-top : -252px;
+    height     : 500px;
+    margin-top : -248px;
     background-color : rgba(0, 0, 0, 0.8);
     z-index    : 10;
 }
@@ -229,6 +234,11 @@ hr {
 
 .content-text {
     padding : 10px;
+}
+
+.click-image {
+   opacity : 0.6;
+   cursor : pointer; 
 }
 
 #footer {
