@@ -1,0 +1,36 @@
+<div class="content-bottom clearfix" style="margin-top:20px;">
+    <div class="elem left" style="padding-top:10px;">
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        // twitter
+        new TWTR.Widget({ 
+            version: 2,
+            type: 'profile',
+            rpp: 4,
+            interval: 30000,
+            width: 480,
+            height: 230,
+            theme: {
+                shell: {
+                    background: '#0095c3',
+                    color: '#ffffff'
+                },
+                tweets: {
+                    background: '#ffffff',
+                    color: '#000000',
+                    links: '#009900'
+                }
+            },
+            features: {
+                scrollbar: true,
+                loop: false,
+                live: true,
+                behavior: 'all'
+            }
+        }).render().setUser('PGHousegotokuji').start();
+        </script>
+    </div>
+    <div class="elem right">
+        <div class="fb-like-box" data-href="https://www.facebook.com/pghousegotokuji" data-width="480" data-height="360" data-show-faces="true" data-stream="true" data-header="true"></div>
+    </div>
+</div>
