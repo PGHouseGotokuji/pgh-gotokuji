@@ -99,7 +99,8 @@ hr {
 }
 
 .elem-text {
-    margin : 10px;
+    margin      : 10px;
+    font-weight : bold;
 }
 
 .elem-list {
@@ -108,7 +109,8 @@ hr {
 }
 
 .profile {
-    font-size : 14px;
+    font-size     : 18px;
+    margin-bottom : 30px;
 }
 
 .home-bar {
@@ -149,10 +151,9 @@ hr {
 .sidebar {
     position   : fixed;
     left       : 0;
-    top        : 50%;
+    top        : 105px;
     width      : 150px;
     height     : 428px;
-    margin-top : -248px;
     background-color : rgba(0, 0, 0, 0.8);
     z-index    : 10;
 }
@@ -165,7 +166,7 @@ hr {
 
 .sidebar a {
     display : block;
-    color : #fff;
+    color   : #fff;
 }
 
 .sidebar a:hover {
@@ -246,7 +247,7 @@ hr {
     color      : #fff; 
     font-size  : 12px;
     text-align : center;
-    background : #000;
+    background : #007f7f;
     margin     : auto;
 }
 
