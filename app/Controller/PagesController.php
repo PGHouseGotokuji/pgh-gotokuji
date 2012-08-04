@@ -83,8 +83,4 @@ class PagesController extends AppController
         $this->set('title_for_layout', TITLE);
         $this->set('title_for_page', TITLE);
     }
-
-
-
-
 }
