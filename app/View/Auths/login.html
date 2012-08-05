@@ -1,0 +1,25 @@
+<script>
+$(function(){
+    $('#AdminAdminName').focus();
+
+    $('.submit-orange').click(function(){
+        $('.loading').show();
+        $('.submit-loading').show();
+        $(this).hide();
+    });
+});
+</script>
+<div class="elem center" style="margin:80px auto 49px auto; padding:20px; border: solid 1px #bcbcbc;">
+    <?= $this->Form->create('Admin', array('type' => 'post', 'url' => '/login')); ?>
+        <?= $this->Form->label('Admin.admin_name'); ?>
+        <?= $this->Form->input('Admin.admin_name', array('size' => 18, 'class' => 'inputbox', 'label'=> false, 'value' => ((isset($admin['Admin']['admin_name']) ? $admin['Admin']['admin_name'] : '')))) ?>
+        <?= $this->Form->error('Admin.admin_name'); ?>
+
+        <?= $this->Form->label('Admin.password') ?>
+        <?= $this->Form->input('Admin.password', array('size' => 18, 'class' => 'inputbox', 'label'=> false, 'value' => ((isset($admin['Admin']['password']) ? $admin['Admin']['password'] : '')))) ?>
+        <?= $this->Form->error('Admin.password'); ?>
+    <?= $this->Form->submit('ログイン', array('class' => 'submit-orange', 'style' => 'text-align:center;margin-top:20px;', 'div' => false)); ?>
+    <p class="loading hide">Loading…</p>
+    <div class="submit-loading center hide"></div>
+    <?= $this->Form->end(); ?>
+</div>

@@ -148,7 +148,43 @@ textarea {
     background  : url(../img/ajax-loader.gif) no-repeat;
 }
 
-/****************************/
+/*** flashデザイン ***/
+.flash-message {
+    position      : fixed;
+    top           : 35px;
+    left          : 50%;
+    height        : 30px;
+    width         : 1000px;
+    margin-left   : -500px;
+    border-radius : 20px;
+    text-align    : center;
+}
+
+.fm-success-icon {
+    background : url(../img/success_01.png) no-repeat;
+    width      : 35px;
+    height     : 35px;
+    float      : left;
+}
+
+.fm-error-icon {
+    background : url(../img/error.png) no-repeat;
+    width      : 35px;
+    height     : 35px;
+    float      : left;
+}
+
+.success {
+    color      : #009900;
+    background : #56ffaa;
+}
+
+.error {
+    color      : #D50035;
+    background : #FFBFCF;
+}
+
+/*********************/
 
 .elem {
     width : 500px;

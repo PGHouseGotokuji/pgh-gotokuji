@@ -4,7 +4,7 @@
     <?= $this->Html->charset(); ?>
     <title><?= h($title_for_layout); ?></title>
     <?= $this->Html->meta('icon'); ?>
-    <?= $this->Html->css('style'); ?>
+    <?= $this->Html->css('admin_style'); ?>
     <?= $scripts_for_layout; ?>
     <meta name="description" content="住民同士でプログラミングを学び合いながら、新しいWEBサービスをどんどん作っちゃうシェアハウス。プログラミングを教え合う（教わる側も、教える側もOK！）ことに興味のある方はjoin us!!">
     <meta name="keywords" content="シェアハウス, プログラミング, 勉強会, PHP, Java, 料理, 屋上, リビング, プロジェクタ, MySQL, MongoDB, Hadoop, ハッカソン, スタートアップ, webサービス, 起業, MBA, facebook, Rails, Python, javascript, node.js, jquery">
@@ -25,22 +25,12 @@
     })();
     <? } ?>
 
-    // facebook
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=134474456690922";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    // google+
-    window.___gcfg = {lang: 'ja'};
-    (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
+    $(function(){
+        $('#flash-message-success').fadeIn(1000).delay(3000).fadeOut(1000);
+        if (window.location.hash == '#_=_') {
+            window.location.hash = '';
+        }
+    });
     </script>
 </head>
 <body>
@@ -54,23 +44,10 @@
     </script>
     <div id="disp-env-code" style="top:0;right:10px;width:32px;height:16px;margin:0;padding:12px 5px 5px 5px;text-align:center;color:#FFF;font-weight:bold;font-size:12px;line-height:10px;background-color:#008000;border: solid 2px #fff;border-top:none;position:absolute;z-index:100000;border-bottom-right-radius:5px;border-bottom-left-radius:5px;cursor:pointer;"><?= ENV_MODE ?></div>
 <? } ?>
-    <div id="fb-root"></div>
-
+    <?= $this->Session->flash(); ?>
     <?= $this->element('sidebar'); ?>
-
-    <div id="header" class="clearfix">
-        <div class="left">
-            <h1>
-                <a href="/"><?= TITLE ?><br /><?= SUB_TITLE ?></a>
-            </h1>
-        </div>
-        <div class="right">
-            <?= $this->element('header_right'); ?>
-        </div>
-    </div>
     <div id="container" class="clearfix">
         <?= $content_for_layout; ?>
-        <?= $this->element('social_feeds'); ?>
     </div>
     <div id="footer">
         <p class="footer">

@@ -33,6 +33,13 @@ Router::connect('/events',    array('controller' => 'pages', 'action' => 'events
 Router::connect('/social',    array('controller' => 'pages', 'action' => 'social'));
 Router::connect('/bookshelf', array('controller' => 'pages', 'action' => 'bookshelf'));
 
+Router::connect('/login',     array('controller' => 'auths', 'action' => 'login'));
+Router::connect('/logout',    array('controller' => 'auths', 'action' => 'logout'));
+Router::connect('/admin/top',             array('controller' => 'admins', 'action' => 'top'));
+Router::connect('/admin/add',             array('controller' => 'admins', 'action' => 'top'));
+Router::connect('/admin/view/:adminId',   array('controller' => 'admins', 'action' => 'view'), array(array('adminId' => '[0-9]+')));
+Router::connect('/admin/edit/:adminId',   array('controller' => 'admins', 'action' => 'edit'), array(array('adminId' => '[0-9]+')));
+Router::connect('/admin/delete/:adminId', array('controller' => 'admins', 'action' => 'top'),  array(array('adminId' => '[0-9]+')));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on 

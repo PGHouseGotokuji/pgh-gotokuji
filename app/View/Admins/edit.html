@@ -1,0 +1,129 @@
+<?= $this->element('leftbar' . DS . 'leftbar') ?>
+<h2><?= h($title_for_page) ?></h2>
+<?= $this->Form->create('Admin', array('type' => 'post', 'url' => '/admin/edit/' . $admin['Admin']['id']));?>
+<div class="cams-form">
+    <table border="0" cellpadding="1" cellspacing="1">
+        <tr>
+            <th>
+                <?= $this->Form->label('id', '管理人ID'); ?>
+            </th>
+            <td>
+                <?= $this->Form->hidden('id', array('value' =>  $admin['Admin']['id']))  ?>
+                <?= h($admin['Admin']['id']); ?>&nbsp;(変更不可)
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('admin_name', '管理人名'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('admin_name', array('label' => false, 'value' => ((isset($admin['Admin']['admin_name'])) ? h($admin['Admin']['admin_name']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('passwd_old', '旧パスワード'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('passwd_old', array('type' => 'password', 'label' => false, 'value' => '')); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('passwd_first', '新パスワード'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('passwd_first', array('type' => 'password', 'label' => false, 'value' => '')); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('passwd_confirm', '新パスワード(確認用)'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('passwd_confirm', array('type' => 'password', 'label' => false, 'value' => '')); ?>
+                <? if (isset($passwdError)) { ?>
+                    <div class="error-msg"><?= $passwdError ?></div>
+                <? } ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('email', 'メールアドレス'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('email', array('label' => false, 'value' => ((isset($admin['Admin']['email'])) ? h($admin['Admin']['email']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('authority_level', '権限'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->radio('authority_level', Admin::$authorityLevelList, array('label' => false, 'legend' => false, 'separator' => '&nbsp;&nbsp;&nbsp;', 'value' => ((isset($admin['Admin']['authority_level'])) ? h($admin['Admin']['authority_level']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('register_status', '登録状況'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->radio('register_status', Admin::$registerStatusList, array('label' => false, 'legend' => false, 'separator' => '&nbsp;&nbsp;&nbsp;', 'value' => ((isset($admin['Admin']['register_status'])) ? h($admin['Admin']['register_status']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('admin_fname', '管理人 姓'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->input('admin_fname', array('label' => false, 'value' => ((isset($admin['Admin']['admin_fname'])) ? h($admin['Admin']['admin_fname']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('admin_lname', '管理人 名'); ?>
+            </th>            
+            <td class="require">
+                <?= $this->Form->input('admin_lname', array('label' => false, 'value' => ((isset($admin['Admin']['admin_lname'])) ? h($admin['Admin']['admin_lname']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('admin_fname_kana', '管理人 姓(カナ)'); ?>
+            </th>            
+            <td class="require">
+                <?= $this->Form->input('admin_fname_kana', array('label' => false, 'value' => ((isset($admin['Admin']['admin_fname_kana'])) ? h($admin['Admin']['admin_fname_kana']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('admin_lname_kana', '管理人 名(カナ)'); ?>
+            </th>            
+            <td class="require">
+                <?= $this->Form->input('admin_lname_kana', array('label' => false, 'value' => ((isset($admin['Admin']['admin_lname_kana'])) ? h($admin['Admin']['admin_lname_kana']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                 <?= $this->Form->label('admin_gender', '性別'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->radio('admin_gender', Admin::$genderList, array('label' => false, 'legend' => false, 'separator' => '&nbsp;&nbsp;&nbsp;', 'value' => ((isset($admin['Admin']['admin_gender'])) ? h($admin['Admin']['admin_gender']) : ''))); ?>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <?= $this->Form->label('memo', 'メモ'); ?>
+            </th>
+            <td class="require">
+                <?= $this->Form->textarea('memo', array('label' => false, 'value' => ((isset($admin['Admin']['memo'])) ? h($admin['Admin']['memo']) : ''))); ?>
+            </td>
+        </tr>
+    </table>
+    <div class="center">
+        <?= $this->Form->submit('更新する', array('class' => 'submit-orange', 'style' => 'text-align:center;margin-bottom:5px;', 'div' => false)); ?>
+        <br />
+        <?= $this->Html->link('戻る', array('action' => 'index')); ?>
+        <?= $this->Form->end(); ?>
+    </div>
+</div>
