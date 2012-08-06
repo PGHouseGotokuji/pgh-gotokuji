@@ -8,6 +8,14 @@
     <?= $scripts_for_layout; ?>
     <meta name="description" content="住民同士でプログラミングを学び合いながら、新しいWEBサービスをどんどん作っちゃうシェアハウス。プログラミングを教え合う（教わる側も、教える側もOK！）ことに興味のある方はjoin us!!">
     <meta name="keywords" content="シェアハウス, プログラミング, 勉強会, PHP, Java, 料理, 屋上, リビング, プロジェクタ, MySQL, MongoDB, Hadoop, ハッカソン, スタートアップ, webサービス, 起業, MBA, facebook, Rails, Python, javascript, node.js, jquery">
+
+    <meta property="og:title" content="<?= TITLE ?>" />
+    <meta property="og:site_name" content="<?= TITLE ?> ~プログラミングを学び合うシェアハウス~" />
+    <meta property="og:type" content="<? ($redirectUrl == '/') ? 'website' : 'article'; ?>" />
+    <meta property="og:url" content="http://pgh-gotokuji.net" />
+    <meta property="og:image" content="/img/pgh-ogp-logo.png" />
+    <meta property="og:locale" content="ja_JP" />
+
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.balloon.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>

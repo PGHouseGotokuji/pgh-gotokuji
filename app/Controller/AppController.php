@@ -16,6 +16,7 @@ Class AppController extends Controller
 //            $this->redirect('/');
         }
         $this->set(compact('loginUser'));
+        $this->set('redirectUrl', $this->referer());
     }
 
     /**
