@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
 <head>
     <?= $this->Html->charset(); ?>
     <title><?= h($title_for_layout); ?></title>
@@ -11,10 +11,13 @@
 
     <meta property="og:title" content="<?= TITLE ?>" />
     <meta property="og:site_name" content="<?= TITLE ?> ~プログラミングを学び合うシェアハウス~" />
+<? /*
     <meta property="og:type" content="<? ($redirectUrl == '/') ? 'website' : 'article'; ?>" />
+*/ ?>
     <meta property="og:url" content="http://pgh-gotokuji.net" />
     <meta property="og:image" content="/img/pgh-ogp-logo.png" />
     <meta property="og:locale" content="ja_JP" />
+    <meta property="fb:app_id" content="<?= FB_ID; ?>" />
 
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.balloon.min.js"></script>
