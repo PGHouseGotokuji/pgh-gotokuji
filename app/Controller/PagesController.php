@@ -26,7 +26,7 @@ class PagesController extends AppController
     public function members()
     {
         $this->set('title_for_layout', TITLE . ' メンバー');
-        $this->set('title_for_page', TITLE　. ' メンバー');
+        $this->set('title_for_page', TITLE . ' メンバー');
     }
 
     /**
