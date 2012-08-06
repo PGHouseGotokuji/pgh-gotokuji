@@ -25,8 +25,8 @@ class PagesController extends AppController
      */
     public function members()
     {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
+        $this->set('title_for_layout', TITLE . ' メンバー');
+        $this->set('title_for_page', TITLE　. ' メンバー');
     }
 
     /**
@@ -36,8 +36,8 @@ class PagesController extends AppController
      */
     public function map()
     {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
+        $this->set('title_for_layout', TITLE . ' マップ');
+        $this->set('title_for_page', TITLE . ' マップ');
     }
 
     /**
@@ -47,8 +47,8 @@ class PagesController extends AppController
      */
     public function photos()
     {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
+        $this->set('title_for_layout', TITLE . ' 写真');
+        $this->set('title_for_page', TITLE . ' 写真');
     }
 
     /**
@@ -58,19 +58,8 @@ class PagesController extends AppController
      */
     public function events()
     {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
-    }
-
-    /**
-     * ソーシャル
-     *
-     * @access public
-     */
-    public function social()
-    {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
+        $this->set('title_for_layout', TITLE . 'イベント');
+        $this->set('title_for_page', TITLE . 'イベント');
     }
 
     /**
@@ -80,7 +69,7 @@ class PagesController extends AppController
      */
     public function bookshelf()
     {
-        $this->set('title_for_layout', TITLE);
-        $this->set('title_for_page', TITLE);
+        $this->set('title_for_layout', TITLE . ' 本棚');
+        $this->set('title_for_page', TITLE . ' 本棚');
     }
 }
