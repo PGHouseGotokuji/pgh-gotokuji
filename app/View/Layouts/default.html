@@ -75,10 +75,10 @@
     <div id="footer">
         <p class="footer">
             Copyright &copy; <?= date('Y'); ?> <?= TITLE ?> all rights reserved.
-        </p>
         <? if (ENV_MODE != 'pro') { ?>
         <?= $this->element('sql_dump');  ?>
         <? } ?>
+        </p>
     </div>
 </body>
 </html>

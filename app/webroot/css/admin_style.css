@@ -1,3 +1,7 @@
+html {
+    background : #003f7f;
+}
+
 body {
     background  : #fff;
     color       : #052c6e;
@@ -85,7 +89,16 @@ textarea {
     margin    : 5px 0;
 }
 
+th {
+    padding     : 10px;
+    font-weight : normal;
+    text-align  : right;
+}
 
+td {
+    padding    : 10px;
+    text-align : left;
+}
 
 /******************
  * original class *
@@ -375,3 +388,4 @@ textarea {
     height   : 1px;
     overflow : hidden;
 }
+
