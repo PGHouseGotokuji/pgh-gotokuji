@@ -113,12 +113,12 @@ if ($ENV_MODE == 'pro'
     || $ENV_MODE == 'dev') {
         define('ENV_MODE', $ENV_MODE);
 } else {
-        // 万が一どの環境変数でもない場合は本番設定とする
-        define('ENV_MODE', 'pro');
+    // 万が一どの環境変数でもない場合は本番設定とする
+    define('ENV_MODE', 'pro');
 }
 // 開発環境時はデバッグモードを書き換える
-if (ENV_MODE == 'dev' || ENV_MODE == 'stg') {
-    Configure::write('debug', 2);
+if (ENV_MODE == 'pro') {
+    Configure::write('debug', 0);
 }
 
 /*** アプリ環境別設定ファイル読み込み ***/
